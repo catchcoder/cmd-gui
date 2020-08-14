@@ -54,34 +54,36 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(607, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1558, 59);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(38, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(64, 55);
             this.toolStripMenuItem1.Text = "Exit";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(47, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(78, 55);
             this.toolStripMenuItem2.Text = "Copy";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(24, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(40, 55);
             this.toolStripMenuItem3.Text = "?";
             // 
             // PnlTop
@@ -90,10 +92,10 @@
             this.PnlTop.Controls.Add(this.GroupBoxControls);
             this.PnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnlTop.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.PnlTop.Location = new System.Drawing.Point(0, 24);
-            this.PnlTop.Margin = new System.Windows.Forms.Padding(2);
+            this.PnlTop.Location = new System.Drawing.Point(0, 83);
+            this.PnlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PnlTop.Name = "PnlTop";
-            this.PnlTop.Size = new System.Drawing.Size(607, 107);
+            this.PnlTop.Size = new System.Drawing.Size(1113, 196);
             this.PnlTop.TabIndex = 1;
             // 
             // GroupBoxControls
@@ -106,20 +108,21 @@
             this.GroupBoxControls.Controls.Add(this.BtnCopy);
             this.GroupBoxControls.Controls.Add(this.BtnStart);
             this.GroupBoxControls.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBoxControls.Location = new System.Drawing.Point(3, 3);
-            this.GroupBoxControls.Margin = new System.Windows.Forms.Padding(2);
+            this.GroupBoxControls.Location = new System.Drawing.Point(6, 6);
+            this.GroupBoxControls.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GroupBoxControls.Name = "GroupBoxControls";
-            this.GroupBoxControls.Padding = new System.Windows.Forms.Padding(2);
-            this.GroupBoxControls.Size = new System.Drawing.Size(600, 111);
+            this.GroupBoxControls.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBoxControls.Size = new System.Drawing.Size(1100, 205);
             this.GroupBoxControls.TabIndex = 0;
             this.GroupBoxControls.TabStop = false;
-            this.GroupBoxControls.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.GroupBoxControls.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // BtnBrowse
             // 
-            this.BtnBrowse.Location = new System.Drawing.Point(551, 13);
+            this.BtnBrowse.Location = new System.Drawing.Point(1010, 24);
+            this.BtnBrowse.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.BtnBrowse.Name = "BtnBrowse";
-            this.BtnBrowse.Size = new System.Drawing.Size(40, 23);
+            this.BtnBrowse.Size = new System.Drawing.Size(73, 42);
             this.BtnBrowse.TabIndex = 6;
             this.BtnBrowse.Text = "...";
             this.BtnBrowse.UseVisualStyleBackColor = true;
@@ -128,49 +131,49 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 41);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(37, 76);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 18);
+            this.label2.Size = new System.Drawing.Size(140, 31);
             this.label2.TabIndex = 5;
             this.label2.Text = "Parameter";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(37, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 18);
+            this.label1.Size = new System.Drawing.Size(138, 31);
             this.label1.TabIndex = 4;
             this.label1.Text = "Command";
             // 
             // txtParameter
             // 
-            this.txtParameter.Location = new System.Drawing.Point(101, 41);
-            this.txtParameter.Margin = new System.Windows.Forms.Padding(2);
+            this.txtParameter.Location = new System.Drawing.Point(185, 76);
+            this.txtParameter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtParameter.Name = "txtParameter";
-            this.txtParameter.Size = new System.Drawing.Size(80, 24);
+            this.txtParameter.Size = new System.Drawing.Size(143, 37);
             this.txtParameter.TabIndex = 3;
             this.txtParameter.Text = "-ano";
             this.txtParameter.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtExecutable
             // 
-            this.txtExecutable.Location = new System.Drawing.Point(102, 13);
-            this.txtExecutable.Margin = new System.Windows.Forms.Padding(2);
+            this.txtExecutable.Location = new System.Drawing.Point(187, 24);
+            this.txtExecutable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtExecutable.Name = "txtExecutable";
-            this.txtExecutable.Size = new System.Drawing.Size(420, 24);
+            this.txtExecutable.Size = new System.Drawing.Size(767, 37);
             this.txtExecutable.TabIndex = 2;
             this.txtExecutable.Text = "netstat.exe";
             this.txtExecutable.TextChanged += new System.EventHandler(this.txtExecutable_TextChanged);
             // 
             // BtnCopy
             // 
-            this.BtnCopy.Location = new System.Drawing.Point(4, 69);
-            this.BtnCopy.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnCopy.Location = new System.Drawing.Point(7, 127);
+            this.BtnCopy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnCopy.Name = "BtnCopy";
-            this.BtnCopy.Size = new System.Drawing.Size(171, 27);
+            this.BtnCopy.Size = new System.Drawing.Size(314, 50);
             this.BtnCopy.TabIndex = 1;
             this.BtnCopy.Text = "Copy to Clipboard";
             this.BtnCopy.UseVisualStyleBackColor = true;
@@ -178,10 +181,10 @@
             // 
             // BtnStart
             // 
-            this.BtnStart.Location = new System.Drawing.Point(441, 69);
-            this.BtnStart.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnStart.Location = new System.Drawing.Point(809, 127);
+            this.BtnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnStart.Name = "BtnStart";
-            this.BtnStart.Size = new System.Drawing.Size(150, 30);
+            this.BtnStart.Size = new System.Drawing.Size(275, 55);
             this.BtnStart.TabIndex = 0;
             this.BtnStart.Text = "Execute";
             this.BtnStart.UseVisualStyleBackColor = true;
@@ -192,37 +195,38 @@
             this.PnlBottom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PnlBottom.Controls.Add(this.webBrowser1);
             this.PnlBottom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlBottom.Location = new System.Drawing.Point(0, 131);
-            this.PnlBottom.Margin = new System.Windows.Forms.Padding(2);
+            this.PnlBottom.Location = new System.Drawing.Point(0, 357);
+            this.PnlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PnlBottom.Name = "PnlBottom";
-            this.PnlBottom.Size = new System.Drawing.Size(607, 415);
+            this.PnlBottom.Size = new System.Drawing.Size(1558, 1054);
             this.PnlBottom.TabIndex = 2;
             // 
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(13, 13);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(24, 24);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(605, 413);
+            this.webBrowser1.Size = new System.Drawing.Size(1556, 1052);
             this.webBrowser1.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 546);
+            this.ClientSize = new System.Drawing.Size(1113, 1008);
             this.Controls.Add(this.PnlBottom);
             this.Controls.Add(this.PnlTop);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CMD-GUI";

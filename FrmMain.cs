@@ -10,7 +10,7 @@ namespace cmd_gui
 
     public partial class FrmMain : Form
     {
-        class Global
+        public class Global
         {
             public static string DisplayText = String.Empty;
 
@@ -48,16 +48,18 @@ namespace cmd_gui
 
                     //Create Process Start information
                     ProcessStartInfo processStartInfo =
-                        new ProcessStartInfo(txtExecutable.Text.Trim(), txtParameter.Text.Trim());
-                    processStartInfo.ErrorDialog = false;
-                    processStartInfo.UseShellExecute = false;
-                    processStartInfo.RedirectStandardError = true;
-                    processStartInfo.RedirectStandardInput = true;
-                    processStartInfo.RedirectStandardOutput = true;
+                        new ProcessStartInfo(txtExecutable.Text.Trim(), txtParameter.Text.Trim())
+                        {
+                            ErrorDialog = false,
+                            UseShellExecute = false,
+                            RedirectStandardError = true,
+                            RedirectStandardInput = true,
+                            RedirectStandardOutput = true
+                        };
 
                     //Execute the process
-                    Process process = new Process();
-                    process.StartInfo = processStartInfo;
+                    Process process = new Process {StartInfo = processStartInfo};
+
                     bool processStarted = process.Start();
                     if (processStarted)
                     {
@@ -91,14 +93,8 @@ namespace cmd_gui
                 }
                 finally
                 {
-                    if (outputReader != null)
-                    {
-                        outputReader.Close();
-                    }
-                    if (errorReader != null)
-                    {
-                        errorReader.Close();
-                    }
+                    outputReader?.Close();
+                    errorReader?.Close();
                     BtnStart.Enabled = true;
                 }
             }
@@ -110,10 +106,11 @@ namespace cmd_gui
 
         private void BtnBrowse_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openDlg = new OpenFileDialog();
-            openDlg.Multiselect = false;
-            openDlg.Filter = "Executables|*.exe|All Files |*.*";
-            openDlg.Title = @"Open executable to run";
+            OpenFileDialog openDlg = new OpenFileDialog
+            {
+                Multiselect = false, Filter = "Executables|*.exe|All Files |*.*", 
+                Title = @"Open executable to run"
+            };
             if (openDlg.ShowDialog() == DialogResult.OK)
             {
                 txtExecutable.Text = openDlg.FileName;
@@ -130,7 +127,7 @@ namespace cmd_gui
             text = text.Replace("  ", " &nbsp;");
             return text;
         }
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void GroupBox1_Enter(object sender, EventArgs e)
         {
 
         }
