@@ -10,7 +10,7 @@ namespace cmd_gui
 
     public partial class FrmMain : Form
     {
-        public class Global
+        private class Global
         {
             public static string DisplayText = String.Empty;
 
@@ -100,7 +100,7 @@ namespace cmd_gui
             }
             else
             {
-                MessageBox.Show("Please select executable.");
+                MessageBox.Show(@"Please select executable.");
             }
         }
 
@@ -108,7 +108,7 @@ namespace cmd_gui
         {
             OpenFileDialog openDlg = new OpenFileDialog
             {
-                Multiselect = false, Filter = "Executables|*.exe|All Files |*.*", 
+                Multiselect = false, Filter = @"Executables|*.exe|All Files |*.*", 
                 Title = @"Open executable to run"
             };
             if (openDlg.ShowDialog() == DialogResult.OK)
@@ -118,7 +118,7 @@ namespace cmd_gui
 
         }
 
-        public static string TextToHtml(string text)
+        private static string TextToHtml(string text)
         {
             text = HttpUtility.HtmlEncode(text);
             text = text.Replace("\r\n", "\r");
